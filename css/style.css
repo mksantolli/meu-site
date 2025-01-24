@@ -1,136 +1,213 @@
-/* Reset básico para remover margens e paddings padrão */
+/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Corpo da página */
+/* CONFIGURAÇÕES GERAIS */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #333;
-  background-color: #fff;
   line-height: 1.6;
-}
-
-/* Cabeçalho */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
   background-color: #fff;
-  z-index: 999;
+  padding-top: 70px; /* Espaço para o header fixo */
 }
 
-header .logo img {
+/* CLASSE CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CABEÇALHO */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.header.scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo img {
   height: 40px;
 }
 
-header nav ul {
+.header nav {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-header nav ul li a {
+.header .nav-links li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-  color: #bc1888; /* cor do gradiente roxo do Instagram */
+.header .nav-links li a:hover {
+  color: #bc1888;
 }
 
-/* Seção Hero */
+/* MENU HAMBÚRGUER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  background-color: #333;
+  height: 3px;
+  width: 25px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 15px;
+}
+
+/* SEÇÃO HERO */
 .hero {
-  height: 60vh;
+  height: 100vh;
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
-  padding: 20px;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
+.hero h1 {
+  font-size: 3.5rem;
   margin-bottom: 20px;
 }
 
-.hero-content p {
+.hero p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
 
 .btn {
-  display: inline-block;
+  padding: 12px 25px;
   background-color: #fff;
   color: #333;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
   font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: #ddd;
 }
 
-/* Seções de Conteúdo */
+.btn-outline {
+  padding: 12px 25px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* SEÇÕES GERAIS */
 .section-content {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 80px 20px;
 }
 
 .section-content h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .section-content p {
   max-width: 800px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.8;
 }
 
-/* Background alternado para seções */
+/* SEÇÃO DE FUNDO CLARO */
 .bg-light {
   background-color: #f9f9f9;
 }
 
-/* Grid simples para texto/imagem */
+/* GRID DE CONTEÚDO */
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
-}
-
-.content-grid p {
-  text-align: left;
-  margin: 0;
+  margin-top: 40px;
 }
 
 .image-example {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   display: block;
   margin: 0 auto;
 }
 
-/* Paleta de Cores */
+/* PALETA DE CORES */
 .color-palette {
   display: flex;
   flex-wrap: wrap;
@@ -142,48 +219,63 @@ header nav ul li a:hover {
 .color-block {
   width: 100px;
   height: 100px;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
-/* Rodapé */
-footer {
+/* BOTÕES EM GRUPOS */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* RODAPÉ */
+.footer {
   text-align: center;
-  padding: 20px;
-  border-top: 1px solid #ddd;
+  padding: 20px 0;
   background-color: #fff;
+  border-top: 1px solid #ddd;
 }
 
-footer p {
+.footer p {
   color: #777;
 }
 
-/* Responsividade para telas menores (celulares, tablets) */
+/* ANIMAÇÕES (via AOS) */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.6s;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  /* Menu: para um projeto real, você faria um menu "hambúrguer".
-     Aqui, apenas escondemos para simplificar. */
-  header nav ul {
-    display: none;
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 
   .content-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    height: auto;
-    padding: 40px 20px;
+  .hamburger {
+    display: flex;
   }
 
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
+  .nav-links {
+    display: none;
   }
 }
