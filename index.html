@@ -2,102 +2,171 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instagram Brand - Exemplo</title>
-  <!-- Conexão com o arquivo CSS (que vamos criar já já) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guia de Marca - Inspirado no Instagram</title>
+
+  <!-- CSS Principal -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- CSS da biblioteca AOS via CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Início do Cabeçalho -->
-  <header>
-    <div class="logo">
-      <!-- Você pode inserir aqui a logo do Instagram ou o nome da sua marca -->
-      <img src="assets/instagram-logo.png" alt="Logo Instagram" height="40">
+  <!-- Cabeçalho Fixo com Menu -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/instagram-logo.png" alt="Logo" height="40">
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#logotipos">Logotipos</a></li>
+          <li><a href="#cores">Cores</a></li>
+          <li><a href="#tipografia">Tipografia</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#logotipos">Logotipos</a></li>
-        <li><a href="#cores">Cores</a></li>
-        <li><a href="#tipografia">Tipografia</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
   </header>
-  <!-- Fim do Cabeçalho -->
 
-  <!-- Seção Hero (Destaque) -->
+  <!-- Seção Hero -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Brand Guidelines</h1>
-      <p>Bem-vindo(a) ao guia de uso da nossa marca.</p>
-      <a href="#sobre" class="btn">Saiba Mais</a>
+    <div class="hero-content container">
+      <h1 data-aos="fade-up">Brand Guidelines</h1>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Descubra como manter a consistência e autenticidade da nossa marca.
+      </p>
+      <div class="hero-buttons">
+        <a href="#sobre" class="btn" data-aos="fade-up" data-aos-delay="400">Saiba Mais</a>
+        <a href="#recursos" class="btn-outline" data-aos="fade-up" data-aos-delay="600">Baixar Recursos</a>
+      </div>
     </div>
   </section>
 
   <!-- Seção Sobre -->
   <section id="sobre" class="section-content">
-    <h2>Sobre a Marca</h2>
-    <p>
-      Nesta página, você encontrará as diretrizes para usar corretamente o nosso logotipo, nossa paleta de cores e nossa tipografia, a fim de manter uma comunicação visual consistente e forte.
-    </p>
+    <div class="container">
+      <h2 data-aos="fade-right">Sobre a Marca</h2>
+      <p data-aos="fade-right" data-aos-delay="200">
+        Nossa marca reflete inovação, autenticidade e conexão. Explore nossos princípios visuais e inspire-se na nossa jornada.
+      </p>
+    </div>
   </section>
 
   <!-- Seção Logotipos -->
   <section id="logotipos" class="section-content bg-light">
-    <h2>Uso do Logotipo</h2>
-    <div class="content-grid">
-      <div>
-        <p>
-          Utilize o logotipo nas cores originais sempre que possível, preservando a proporção e a integridade da marca. Não distorça, rotacione ou altere as cores do logo.
-        </p>
-      </div>
-      <div>
-        <img src="assets/instagram-logo.png" alt="Exemplo de Logotipo" class="image-example">
+    <div class="container">
+      <h2 data-aos="fade-up">Uso do Logotipo</h2>
+      <div class="content-grid">
+        <div data-aos="fade-right">
+          <p>
+            Os logotipos oficiais devem ser usados com proporção e cores adequadas. Evite alterações ou distorções que comprometam a identidade visual.
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <img src="assets/instagram-logo.png" alt="Exemplo de Logotipo" class="image-example">
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Seção Cores -->
   <section id="cores" class="section-content">
-    <h2>Paleta de Cores</h2>
-    <p>
-      As cores principais do Instagram seguem o gradiente que vai do amarelo ao roxo. Aqui está uma paleta simplificada:
-    </p>
-    <div class="color-palette">
-      <div class="color-block" style="background: #f09433;">#f09433</div>
-      <div class="color-block" style="background: #e6683c;">#e6683c</div>
-      <div class="color-block" style="background: #dc2743;">#dc2743</div>
-      <div class="color-block" style="background: #cc2366;">#cc2366</div>
-      <div class="color-block" style="background: #bc1888;">#bc1888</div>
+    <div class="container">
+      <h2 data-aos="fade-up">Paleta de Cores</h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+        A paleta de cores representa nossa energia e criatividade, refletindo valores de autenticidade e inovação.
+      </p>
+      <div class="color-palette" data-aos="zoom-in" data-aos-delay="300">
+        <div class="color-block" style="background: #f09433;">#f09433</div>
+        <div class="color-block" style="background: #e6683c;">#e6683c</div>
+        <div class="color-block" style="background: #dc2743;">#dc2743</div>
+        <div class="color-block" style="background: #cc2366;">#cc2366</div>
+        <div class="color-block" style="background: #bc1888;">#bc1888</div>
+      </div>
     </div>
   </section>
 
   <!-- Seção Tipografia -->
   <section id="tipografia" class="section-content bg-light">
-    <h2>Tipografia</h2>
-    <p>
-      Recomendamos fontes sem serifa, limpas e modernas, para garantir legibilidade e consistência. Exemplos incluem Arial, Helvetica ou “Open Sans” (Google Fonts).
-    </p>
+    <div class="container">
+      <h2 data-aos="fade-up">Tipografia</h2>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Escolhemos fontes modernas e claras para garantir uma comunicação eficaz e acessível.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção Recursos -->
+  <section id="recursos" class="section-content">
+    <div class="container">
+      <h2 data-aos="fade-up">Recursos Disponíveis</h2>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Baixe logotipos, guias e outros recursos que reforçam a consistência da nossa marca.
+      </p>
+      <div class="btn-group" data-aos="fade-up" data-aos-delay="400">
+        <a href="#" class="btn">Baixar Logotipo (PNG)</a>
+        <a href="#" class="btn">Baixar Guia (PDF)</a>
+      </div>
+    </div>
   </section>
 
   <!-- Seção Contato -->
   <section id="contato" class="section-content">
-    <h2>Contato</h2>
-    <p>
-      Em caso de dúvidas sobre o uso da marca, entre em contato conosco:
-    </p>
-    <a href="mailto:contato@suaempresa.com" class="btn">
-      Enviar E-mail
-    </a>
+    <div class="container">
+      <h2 data-aos="fade-up">Contato</h2>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Tem dúvidas? Entre em contato com nossa equipe para orientações e suporte.
+      </p>
+      <a href="mailto:contato@seudominio.com" class="btn" data-aos="fade-up" data-aos-delay="400">
+        Enviar E-mail
+      </a>
+    </div>
   </section>
 
-  <!-- Início do Rodapé -->
-  <footer>
-    <p>&copy; 2025 Sua Marca. Todos os direitos reservados.</p>
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 SuaMarca. Todos os direitos reservados.</p>
+    </div>
   </footer>
-  <!-- Fim do Rodapé -->
 
+  <!-- JS da biblioteca AOS via CDN -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // duração das animações
+      once: true, // anima apenas na primeira vez
+    });
+
+    // Header transparente com menu hamburguer
+    const header = document.getElementById('header');
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('toggle');
+    });
+  </script>
 </body>
 </html>
