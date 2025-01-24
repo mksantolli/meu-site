@@ -2,10 +2,10 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <!-- Viewport fit para usar safe areas -->
+  <!-- Para usar a tela toda em iPhones com notch -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- Web app iOS -->
+  <!-- Modo Web App iOS (Add to Home Screen) -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -14,28 +14,30 @@
   <!-- CSS Principal -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- CSS da biblioteca AOS -->
+  <!-- Biblioteca AOS (animações) -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER FIXO TRANSPARENTE -->
   <header class="header" id="header">
     <div class="container">
       <div class="logo">
+        <!-- Logo (pode trocar por outro) -->
         <img src="assets/instagram-logo.png" alt="Logo" height="40" />
       </div>
       <nav>
-        <!-- Botão Hambúrguer (aparece em telas pequenas) -->
+        <!-- Menu hambúrguer (aparece no mobile) -->
         <div class="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </div>
 
+        <!-- Links de navegação -->
         <ul class="nav-links">
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#logotipos">Logotipos</a></li>
@@ -48,7 +50,7 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-content container">
       <h1 data-aos="fade-up">Brand Guidelines</h1>
@@ -62,21 +64,81 @@
     </div>
   </section>
 
-  <!-- SEÇÕES (exemplos) -->
+  <!-- SEÇÃO SOBRE -->
   <section id="sobre" class="section-content">
     <div class="container">
       <h2 data-aos="fade-right">Sobre a Marca</h2>
-      <p data-aos="fade-right" data-aos-delay="200">Texto sobre a marca...</p>
+      <p data-aos="fade-right" data-aos-delay="200">
+        Nossa identidade visual reflete inovação, autenticidade e conexão. Conheça nossos pilares e valores.
+      </p>
     </div>
   </section>
 
-  <!-- ... Demais seções (logotipos, cores, etc.) ... -->
+  <!-- SEÇÃO LOGOTIPOS -->
+  <section id="logotipos" class="section-content bg-light">
+    <div class="container">
+      <h2 data-aos="fade-up">Logotipos</h2>
+      <div class="content-grid">
+        <div data-aos="fade-right">
+          <p>
+            Utilize sempre as versões oficiais do logotipo, respeitando proporções e cores.
+            Evite qualquer distorção ou alteração indevida.
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <img src="assets/instagram-logo.png" alt="Exemplo de Logotipo" class="image-example" />
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SEÇÃO CORES -->
+  <section id="cores" class="section-content">
+    <div class="container">
+      <h2 data-aos="fade-up">Paleta de Cores</h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Refletindo criatividade e energia, nossa paleta vibrante sustenta a identidade da marca.
+      </p>
+      <div class="color-palette" data-aos="zoom-in" data-aos-delay="300">
+        <div class="color-block" style="background: #f09433;">#f09433</div>
+        <div class="color-block" style="background: #e6683c;">#e6683c</div>
+        <div class="color-block" style="background: #dc2743;">#dc2743</div>
+        <div class="color-block" style="background: #cc2366;">#cc2366</div>
+        <div class="color-block" style="background: #bc1888;">#bc1888</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO TIPOGRAFIA -->
+  <section id="tipografia" class="section-content bg-light">
+    <div class="container">
+      <h2 data-aos="fade-up">Tipografia</h2>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Nossas fontes buscam transmitir clareza e modernidade, reforçando a presença da marca.
+      </p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO RECURSOS -->
+  <section id="recursos" class="section-content">
+    <div class="container">
+      <h2 data-aos="fade-up">Recursos Disponíveis</h2>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Baixe logotipos e materiais de apoio para aplicar a marca de forma consistente.
+      </p>
+      <div class="btn-group" data-aos="fade-up" data-aos-delay="400">
+        <a href="#" class="btn">Baixar Logotipo</a>
+        <a href="#" class="btn">Baixar Guia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO CONTATO -->
   <section id="contato" class="section-content">
     <div class="container">
       <h2 data-aos="fade-up">Contato</h2>
       <p data-aos="fade-up" data-aos-delay="200">
-        Tem dúvidas específicas? Fale conosco.
+        Entre em contato para dúvidas específicas ou suporte na aplicação da marca.
       </p>
       <a href="mailto:contato@seudominio.com" class="btn" data-aos="fade-up" data-aos-delay="400">
         Enviar E-mail
@@ -94,12 +156,9 @@
   <!-- JS da biblioteca AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
+    AOS.init({ duration: 800, once: true });
 
-    // Header que muda ao rolar
+    // Muda header ao rolar
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -112,10 +171,9 @@
     // Script do menu hambúrguer
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-    
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');  // alterna classe .open
-      hamburger.classList.toggle('toggle'); // anima o hambúrguer
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('toggle');
     });
   </script>
 </body>
